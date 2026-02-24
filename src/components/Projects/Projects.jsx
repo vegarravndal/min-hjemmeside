@@ -10,7 +10,7 @@ const projectsData = [
   },
   {
     title: "Web Store",
-    url: "https://my-webstore-sigma.vercel.app",
+    url: "https://vegars-store.vercel.app",
     description: "E-commerce store built with React and Tailwind.",
     tech: ["React", "Tailwind", "Vercel"],
   },
