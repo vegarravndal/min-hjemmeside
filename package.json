@@ -38,15 +38,7 @@
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "eslint.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vegar24sfj/react-intermediate-oppgave-del-1.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vegar24sfj/react-intermediate-oppgave-del-1/issues"
-  },
-  "homepage": "https://github.com/vegar24sfj/react-intermediate-oppgave-del-1#readme"
+  "license": "ISC"
 }
