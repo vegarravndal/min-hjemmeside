@@ -11,7 +11,6 @@ const HamburgerBar = ({ scrollToSection, toggleMenu, menuOpen }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!menuOpen) return;
-
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target) &&
@@ -28,7 +27,6 @@ const HamburgerBar = ({ scrollToSection, toggleMenu, menuOpen }) => {
 
   const handleMenuItemClick = (section) => {
     toggleMenu();
-
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         scrollToSection(section);
@@ -37,7 +35,7 @@ const HamburgerBar = ({ scrollToSection, toggleMenu, menuOpen }) => {
   };
 
   return (
-    <div className="relative flex items-center justify-center md:hidden">
+    <div className="relative flex items-center justify-center md:hidden text-[16px]">
       <button
         ref={buttonRef}
         onClick={toggleMenu}

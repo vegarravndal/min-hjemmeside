@@ -1,15 +1,17 @@
 import React from "react";
 
 const NavItem = ({ text, onClick }) => {
+  const isContact = text === "Contact";
+
   return (
-    <li className="list-none nav-item">
+    <li className="list-none">
       <button
         onClick={onClick}
         aria-label={`Navigate to ${text}`}
-        className={`text-menu font-helvetica transition-all duration-300 ${
-          text === "Contact"
-            ? "text-black bg-white border border-gray-500 px-6 py-2 rounded-4xl hover:bg-gray-100"
-            : "text-[var(--text-secondary)] hover:underline px-0 py-2"
+        className={`transition-all duration-200 font-medium ${
+          isContact
+            ? "text-black border border-gray-300 px-5 py-2 rounded-full hover:bg-gray-100"
+            : "text-gray-600 hover:text-black"
         }`}
       >
         {text}

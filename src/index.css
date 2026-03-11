@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+/* Egne CSS-variabler og styling */
 :root {
   --primary: #345ad4;
   --secondary: #819bed;
@@ -12,17 +13,20 @@
   --bg-secondary: #edf2f7;
   --header-height: 76px;
 
-  /* Ny shadow-variabel */
+  /* Shadow */
   --box-shadow: 0 4px 24px 1px rgba(0, 0, 0, 0.1);
 }
 
+/* Global font */
 body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Tekstskygger */
 .text-shadow {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
+
 .text-shadow-sm {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }

@@ -2,12 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer
-      className="bg-[var(--bg-primary)] text-[var(--text-primary)] py-6"
-      style={{ boxShadow: "var(--box-shadow)" }}
-    >
+    <footer className="border-t border-gray-200 py-24 font-[Wix_Madefor_Text]">
       <div className="container mx-auto text-center">
-        <p className="text-sm sm:text-base">&copy; 2025 Vegar Ravndal</p>
+        <p className="text-sm text-gray-500">
+          © 2025 Vegar Ravndal
+        </p>
       </div>
     </footer>
   );

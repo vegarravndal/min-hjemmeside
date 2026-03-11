@@ -14,19 +14,14 @@ const App = () => {
   const headerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(76); // fallback
 
-  // Scroll to section (ID må matche section id)
+  // Scroll til seksjon (ID må matche section id)
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
-
-    // Beregn posisjon med offset for fixed header
-    const yOffset = headerHeight; 
-    const y = section.getBoundingClientRect().top + window.pageYOffset - yOffset;
-
-    window.scrollTo({ top: y, behavior: "smooth" });
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // Mål header-høyde dynamisk (kun for Hero padding og scroll offset)
+  // Mål header-høyde dynamisk
   useEffect(() => {
     const updateHeaderHeight = () => {
       if (headerRef.current) {
@@ -34,8 +29,7 @@ const App = () => {
       }
     };
 
-    updateHeaderHeight(); // init
-
+    updateHeaderHeight(); // initial
     window.addEventListener("resize", updateHeaderHeight);
     return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
@@ -48,13 +42,13 @@ const App = () => {
           <Header ref={headerRef} scrollToSection={scrollToSection} />
 
           {/* Main content */}
-          <main className="flex-1">
-            <Hero scrollToSection={scrollToSection} headerHeight={headerHeight} />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-          </main>
+          <main className="flex-1 space-y-24">
+  <Hero scrollToSection={scrollToSection} headerHeight={headerHeight} />
+  <About headerHeight={headerHeight} />
+  <Skills headerHeight={headerHeight} />
+  <Projects headerHeight={headerHeight} />
+  <Contact headerHeight={headerHeight} />
+</main>
 
           {/* Footer */}
           <Footer />

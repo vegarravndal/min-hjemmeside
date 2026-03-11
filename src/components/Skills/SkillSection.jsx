@@ -4,27 +4,18 @@ import skillsData from "../../data/Skills.json"; // Pass på at stien stemmer
 const SkillSection = ({ headerHeight = 64 }) => {
   return (
     <section
-      id="skills"
-      className="px-4 pt-20 pb-0 md:px-12"
-      style={{
-        scrollMarginTop: headerHeight, // Viktig for korrekt scroll
-      }}
-    >
+  id="skills"
+  className="px-4 md:px-12"
+  style={{ scrollMarginTop: `${headerHeight}px` }}
+>
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="
-          text-2xl md:text-3xl
-          font-medium
-          mb-10
-          text-[var(--text-primary)]
-          relative
-          font-helvetica
-        ">
+        <h2 className="text-2xl md:text-3xl font-medium mb-10 text-[var(--text-primary)] relative">
           My Skills
           <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-[var(--primary)]"></span>
         </h2>
 
-        <p className="text-body font-helvetica mb-12 text-[var(--text-primary)] leading-[1.6]">
+        <p className="mb-12 text-[var(--text-primary)] leading-[1.6]">
           Here are some of the technologies I use regularly:
         </p>
 

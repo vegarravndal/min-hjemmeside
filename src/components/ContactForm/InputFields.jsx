@@ -1,31 +1,26 @@
-export const InputField = ({
-  name,
-  type,
-  placeholder,
-  value,
-  children,
-  onChange,
-  className = "", // Allow custom className to be passed
-}) => {
-  const InputComponent = type === `textarea` ? `textarea` : `input`;
+import React from "react";
+
+export const InputField = ({ name, type = "text", placeholder, value, onChange, children }) => {
+  const Component = type === "textarea" ? "textarea" : "input";
 
   return (
     <div className="w-full mb-4">
-      <label
-        htmlFor={name}
-        className="block font-semibold mb-2 text-[var(--text-primary)]"
-      >
-        {children}
-      </label>
-      <InputComponent
-        type={type === `textarea` ? undefined : type}
+      {children && (
+        <label htmlFor={name} className="block mb-2 font-semibold text-[var(--text-primary)]">
+          {children}
+        </label>
+      )}
+      <Component
+        id={name}
         name={name}
-        className={`text-[var(--text-primary)] bg-[var(--bg-secondary)] border-gray-300 border-[1px] focus:border-[var(--accent)] focus:outline-none w-full px-4 py-2 rounded-md focus:ring-2 focus:ring-[var(--accent)] ${className}`}
+        type={type === "textarea" ? undefined : type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
         required
-        rows={type === `textarea` ? 4 : undefined}
+        rows={type === "textarea" ? 6 : undefined}
+        className="w-full px-4 py-3 rounded-3xl border border-gray-300 bg-[var(--bg-secondary)]
+                   text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
       />
     </div>
   );
