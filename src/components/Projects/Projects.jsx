@@ -1,26 +1,22 @@
 import React from "react";
 
-const Projects = ({ headerHeight = 64 }) => {
+const Projects = ({ headerHeight = 16 }) => {
   return (
-    <section
-      id="projects"
-      className="px-4 md:px-12"
-      style={{ scrollMarginTop: `${headerHeight}px` }}
-    >
+    <section id="projects" className="px-4 md:px-12 scroll-mt-16">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-medium mb-14 text-[var(--text-primary)] relative">
+        <h2 className="text-3xl font-medium text-gray-900 mb-14">
           Projects
-          <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-[var(--primary)]"></span>
         </h2>
 
         <div className="grid gap-12 md:grid-cols-2">
-          <div className="p-6 border border-gray-200 rounded-xl bg-gray-50">
+          {/* Prosjekt 1 */}
+          <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.12),0_10px_30px_rgba(0,0,0,0.08)]">
             <h3 className="mb-2 font-semibold">
               <a
                 href="https://www.artstation.com/vegarravndal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--primary)] hover:underline"
+                className="text-blue-600 hover:underline"
               >
                 3D Blender Project
               </a>
@@ -28,13 +24,14 @@ const Projects = ({ headerHeight = 64 }) => {
             <p>Interactive 3D models and animations showcased via WebGL/Three.js.</p>
           </div>
 
-          <div className="p-6 border border-gray-200 rounded-xl bg-gray-50">
+          {/* Prosjekt 2 */}
+          <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.12),0_10px_30px_rgba(0,0,0,0.08)]">
             <h3 className="mb-2 font-semibold">
               <a
                 href="https://vegars-butikk.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--primary)] hover:underline"
+                className="text-blue-600 hover:underline"
               >
                 Portfolio Website
               </a>

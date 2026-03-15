@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useContact } from "./ContactContext";
 
-const ContactForm = ({ headerHeight = 76 }) => {
+const ContactForm = ({ headerHeight = 16 }) => {
   const { sendMessage } = useContact();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,27 +16,19 @@ const ContactForm = ({ headerHeight = 76 }) => {
   };
 
   return (
-    <section
-  id="contact"
-  className="px-4 mb-24 md:px-12"
-  style={{ scrollMarginTop: `${headerHeight}px` }}
->
+    <section id="contact" className="px-4 mb-24 md:px-12 scroll-mt-16">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-medium mb-14 text-[var(--text-primary)] relative">
+        <h2 className="text-3xl font-medium text-gray-900 mb-14">
           Contact Me
-          <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-[var(--primary)]"></span>
         </h2>
 
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-6 text-left"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 text-left">
           <input
             type="text"
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             required
           />
           <input
@@ -44,20 +36,20 @@ const ContactForm = ({ headerHeight = 76 }) => {
             placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             required
           />
           <textarea
             placeholder="Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             rows={6}
             required
           ></textarea>
           <button
             type="submit"
-            className="px-6 py-3 bg-[var(--primary)] text-white font-semibold rounded-full transition hover:bg-blue-600"
+            className="px-6 py-3 font-semibold text-white transition bg-blue-600 rounded-full hover:bg-blue-700"
           >
             Send Message
           </button>
