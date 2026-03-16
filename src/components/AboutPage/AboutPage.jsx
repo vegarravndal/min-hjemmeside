@@ -4,7 +4,7 @@ const AboutPage = ({ headerHeight = 16 }) => {
   return (
     <section
       id="about"
-      className="px-4 md:px-12 scroll-mt-16"
+      className="px-4 md:px-12"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-medium text-center text-gray-900 md:text-3xl mb-14">

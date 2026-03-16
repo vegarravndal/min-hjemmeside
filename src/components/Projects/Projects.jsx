@@ -2,7 +2,7 @@ import React from "react";
 
 const Projects = ({ headerHeight = 16 }) => {
   return (
-    <section id="projects" className="px-4 md:px-12 scroll-mt-16">
+    <section id="projects" className="px-4 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-medium text-gray-900 mb-14">
           Projects

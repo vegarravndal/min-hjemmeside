@@ -3,7 +3,7 @@ import skillsData from "../../data/Skills.json";
 
 const SkillSection = ({ headerHeight = 16 }) => {
   return (
-    <section id="skills" className="px-4 md:px-12 scroll-mt-16">
+    <section id="skills" className="px-4 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="mb-10 text-2xl font-medium text-gray-900 md:text-3xl">
           My Skills

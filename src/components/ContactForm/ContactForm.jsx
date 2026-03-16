@@ -16,7 +16,7 @@ const ContactForm = ({ headerHeight = 16 }) => {
   };
 
   return (
-    <section id="contact" className="px-4 mb-24 md:px-12 scroll-mt-16">
+    <section id="contact" className="px-4 mb-24 md:px-12">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-medium text-gray-900 mb-14">
           Contact Me

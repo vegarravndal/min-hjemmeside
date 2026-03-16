@@ -14,8 +14,17 @@ const Header = forwardRef(({ scrollToSection, headerHeight = 76 }, ref) => {
       style={{ height: `${headerHeight}px` }}
     >
       <div className="flex items-center w-full h-full px-6 lg:px-12">
-        {/* Desktop */}
-        <div className="hidden md:flex">
+
+        {/* Logo */}
+        <h1
+          onClick={() => scrollToSection("home")}
+          className="text-xl font-bold transition cursor-pointer hover:opacity-70"
+        >
+          Vegar Ravndal
+        </h1>
+
+        {/* Desktop Nav */}
+        <div className="hidden ml-auto md:flex">
           <NavBar scrollToSection={scrollToSection} />
         </div>
 
@@ -27,6 +36,7 @@ const Header = forwardRef(({ scrollToSection, headerHeight = 76 }, ref) => {
             menuOpen={menuOpen}
           />
         </div>
+
       </div>
     </header>
   );

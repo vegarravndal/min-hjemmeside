@@ -2,24 +2,61 @@
 
 @import "tailwindcss";
 
-/* Egne CSS-variabler og styling */
+/* CSS Variabler */
 :root {
   --primary: #345ad4;
   --secondary: #819bed;
   --accent: #d8d8d8;
+
   --text-primary: #0a0a0a;
   --text-secondary: #333333;
+
   --bg-primary: #ffffff;
   --bg-secondary: #edf2f7;
+
   --header-height: 76px;
 
-  /* Shadow */
   --box-shadow: 0 4px 24px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Global font */
 body {
   font-family: "Wix Madefor Text", sans-serif;
+}
+
+/* Bakgrunn */
+.app-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+
+  background:
+    radial-gradient(
+      circle at 20% 35%,
+      rgba(255, 200, 230, 0.35) 0%,
+      rgba(255, 200, 230, 0.15) 20%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(180, 200, 255, 0.35) 0%,
+      rgba(180, 200, 255, 0.15) 25%,
+      transparent 45%
+    ),
+    linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #ffffff 15%,
+      #f8fafc 30%,
+      #eef2ff 45%,
+      #e9e5ff 55%,
+      #f3e8ff 70%,
+      #faf5ff 85%,
+      #ffffff 100%
+    );
+
+  filter: blur(100px);
 }
 
 /* Tekstskygger */
