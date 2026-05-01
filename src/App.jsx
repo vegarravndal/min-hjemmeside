@@ -14,7 +14,6 @@ const App = () => {
   const headerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(76);
 
-  // Scroll til seksjon
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
@@ -28,7 +27,6 @@ const App = () => {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  // Dynamisk header-høyde
   useEffect(() => {
     const updateHeaderHeight = () => {
       if (headerRef.current) {
@@ -46,34 +44,25 @@ const App = () => {
     <MenuProvider>
       <ContactProvider>
 
-        {/* Global bakgrunn */}
+        {/* ✅ BACKGROUND (MÅ være helt øverst) */}
         <div className="app-background" />
 
+        {/* CONTENT */}
         <div className="relative flex flex-col min-h-screen">
 
-          {/* Header */}
           <Header
             ref={headerRef}
             scrollToSection={scrollToSection}
           />
 
-          {/* Main content */}
           <main className="flex-1 space-y-24">
-            <Hero
-              scrollToSection={scrollToSection}
-              headerHeight={headerHeight}
-            />
-
+            <Hero scrollToSection={scrollToSection} headerHeight={headerHeight} />
             <About headerHeight={headerHeight} />
-
             <Skills headerHeight={headerHeight} />
-
             <Projects headerHeight={headerHeight} />
-
             <Contact headerHeight={headerHeight} />
           </main>
 
-          {/* Footer */}
           <Footer scrollToSection={scrollToSection} />
 
         </div>
