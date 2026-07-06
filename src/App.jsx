@@ -12,6 +12,7 @@ import Contact from "./components/ContactForm/ContactForm";
 
 const App = () => {
   const headerRef = useRef(null);
+  
   const [headerHeight, setHeaderHeight] = useState(76);
 
   const scrollToSection = (id) => {
@@ -40,6 +41,8 @@ const App = () => {
     return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
 
+  
+
   return (
     <MenuProvider>
       <ContactProvider>
@@ -55,7 +58,7 @@ const App = () => {
             scrollToSection={scrollToSection}
           />
 
-          <main className="flex-1 space-y-24">
+          <main className="flex-1">
             <Hero scrollToSection={scrollToSection} headerHeight={headerHeight} />
             <About headerHeight={headerHeight} />
             <Skills headerHeight={headerHeight} />

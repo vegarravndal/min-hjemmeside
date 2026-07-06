@@ -1,8 +1,12 @@
 import React from "react";
 
-const AboutPage = () => {
+const AboutPage = ({ headerHeight = 16 }) => {
   return (
-    <section id="about" className="px-4 md:px-12">
+    <section
+      id="about"
+      className="px-4 section bg-white-section md:px-12"
+      style={{ scrollMarginTop: `${headerHeight}px` }}
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-medium text-center text-gray-900 md:text-3xl mb-14">
           About Me

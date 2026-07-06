@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = ({ scrollToSection }) => {
   return (
-    <footer className="relative z-50 bg-white border-t border-gray-200 py-16 font-['Wix Madefor Text']">
+    <footer className="relative z-50 bg-white border-t border-gray-200 py-24 font-['Wix Madefor Text']">
       <div className="flex flex-col items-center max-w-6xl gap-8 px-6 mx-auto">
 
         {/* Footer logo */}

@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 const NavBar = ({ scrollToSection }) => {
   return (
     <nav>
-      <ul className="flex items-center gap-8 text-[16px] font-medium">
+      <ul className="flex items-center gap-8 text-[18px] font-medium">
         {MENU_LIST.map((item, index) => (
           <NavItem
             key={index}

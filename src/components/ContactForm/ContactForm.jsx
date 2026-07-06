@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useContact } from "./ContactContext";
 import { InputField } from "./InputFields";
 
-const ContactForm = () => {
+const ContactForm = ({ headerHeight = 16 }) => {
   const { sendMessage } = useContact();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +17,11 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="px-4 mb-24 md:px-12">
+    <section
+      id="contact"
+      className="section bg-white-section px-4 md:px-12"
+      style={{ scrollMarginTop: `${headerHeight}px` }}
+    >
       <div className="max-w-3xl mx-auto text-center">
 
         <h2 className="text-3xl font-medium text-gray-900 mb-14">
