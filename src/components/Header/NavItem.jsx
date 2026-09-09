@@ -10,7 +10,7 @@ const NavItem = ({ text, onClick }) => {
         aria-label={`Navigate to ${text}`}
         className={`transition-all duration-200 font-medium ${
           isContact
-            ? "text-black border border-gray-300 px-5 py-2 rounded-full hover:bg-gray-100"
+            ? "text-black border border-2 border-gray-900 px-5 py-2 rounded-none hover:bg-gray-100"
             : "text-gray-600 hover:text-black"
         }`}
       >

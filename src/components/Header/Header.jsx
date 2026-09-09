@@ -15,7 +15,7 @@ const Header = forwardRef(({ scrollToSection, headerHeight = 76 }, ref) => {
 
         <h1
           onClick={() => scrollToSection("home")}
-          className="text-xl font-bold cursor-pointer hover:opacity-70"
+          className="text-xl font-normal cursor-pointer hover:opacity-70"
         >
           Vegar Ravndal
         </h1>

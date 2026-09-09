@@ -8,7 +8,7 @@ const Footer = ({ scrollToSection }) => {
         {/* Footer logo */}
         <h1
           onClick={() => scrollToSection("home")}
-          className="text-lg font-bold transition cursor-pointer hover:opacity-70"
+          className="text-lg font-normal transition cursor-pointer hover:opacity-70"
         >
           Vegar Ravndal
         </h1>
