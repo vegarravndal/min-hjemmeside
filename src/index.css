@@ -1,28 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 @import "tailwindcss";
 
 /* =========================
    BASE
 ========================= */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #f3f4f6; /* light gray */
 }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
-  --playful-font: 'Fredoka One', cursive;
+  --playful-font: "Outfit", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .text-playful {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-playful {
   font-family: var(--playful-font);
+  font-weight: 700; /* Du kan også prøve 800 for ekstra tykkelse */
 }
 
 /* =========================
@@ -41,9 +48,6 @@ h1, h2, h3, h4, h5, h6, .text-playful {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-}
-
-.app-background {
   background-color: #f3f4f6; /* default gray */
   transition: background-color 0.6s ease;
 }
@@ -57,7 +61,9 @@ h1, h2, h3, h4, h5, h6, .text-playful {
    Add per-section bg classes with smooth transitions
 ========================= */
 .section {
-  transition: background-color 0.6s ease, color 0.4s ease;
+  transition:
+    background-color 0.6s ease,
+    color 0.4s ease;
   padding-top: 4rem;
   padding-bottom: 4rem;
   position: relative;
@@ -74,9 +80,15 @@ h1, h2, h3, h4, h5, h6, .text-playful {
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .bg-white-section {
