@@ -8,7 +8,7 @@ const AboutPage = ({ headerHeight = 64 }) => {
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-900 md:text-4xl mb-14">
+        <h2 className="text-3xl font-bold text-center text-gray-900 md:text-4xl mb-10">
           About Me
         </h2>
 

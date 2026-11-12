@@ -58,6 +58,7 @@ const HamburgerBar = ({ scrollToSection, toggleMenu, menuOpen }) => {
               <NavItem
                 key={index}
                 text={item.text}
+                icon={item.icon}
                 onClick={() =>
                   handleMenuItemClick(item.text.toLowerCase())
                 }

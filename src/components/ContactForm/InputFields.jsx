@@ -29,7 +29,7 @@ export const InputField = ({
         value={value}
         onChange={onChange}
         required
-        rows={type === "textarea" ? 6 : undefined}
+        rows={type === "textarea" ? 4 : undefined}
         className="w-full px-4 py-3 text-gray-900 transition bg-white border border-gray-200 shadow-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>

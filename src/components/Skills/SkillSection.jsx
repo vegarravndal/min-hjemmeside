@@ -13,7 +13,7 @@ const SkillSection = ({ headerHeight = 16 }) => {
           My Skills
         </h2>
 
-        <p className="mb-12 leading-relaxed text-gray-900">
+        <p className="mb-10 leading-relaxed text-gray-900">
           Here are some of the technologies I use regularly:
         </p>
 

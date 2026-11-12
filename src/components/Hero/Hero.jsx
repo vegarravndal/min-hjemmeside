@@ -6,7 +6,7 @@ const Hero = ({ scrollToSection, headerHeight = 64 }) => {
       id="home"
       className="relative flex items-center justify-center w-full px-6 pt-24 overflow-hidden section bg-hero"
       style={{
-        minHeight: "65vh",
+        minHeight: "60vh",
         scrollMarginTop: `${headerHeight}px`,
       }}
     >

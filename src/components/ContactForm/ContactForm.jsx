@@ -7,13 +7,25 @@ const ContactForm = ({ headerHeight = 16 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await sendMessage({ name, email, message });
-    setName("");
-    setEmail("");
-    setMessage("");
+    setStatus("");
+    setIsSubmitting(true);
+
+    try {
+      await sendMessage({ name, email, message });
+      setName("");
+      setEmail("");
+      setMessage("");
+      setStatus("Thanks! Your message has been sent.");
+    } catch (error) {
+      setStatus(error.message || "Could not send your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -24,11 +36,11 @@ const ContactForm = ({ headerHeight = 16 }) => {
     >
       <div className="max-w-3xl mx-auto text-center">
 
-        <h2 className="text-3xl font-medium text-gray-900 mb-14">
+        <h2 className="text-3xl font-medium text-gray-900 mb-10">
           Contact Me
         </h2>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6 text-left">
+        <form onSubmit={handleSubmit} className="mx-auto flex w-full max-w-xl flex-col gap-6 text-left">
 
           <InputField
             name="name"
@@ -53,11 +65,18 @@ const ContactForm = ({ headerHeight = 16 }) => {
             onChange={(e) => setMessage(e.target.value)}
           />
 
+          {status && (
+            <p role="status" aria-live="polite" className="text-sm text-gray-700">
+              {status}
+            </p>
+          )}
+
           <button
             type="submit"
+            disabled={isSubmitting}
             className="px-6 py-3 font-semibold text-white transition bg-blue-600 rounded-full hover:bg-blue-700"
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
 
         </form>

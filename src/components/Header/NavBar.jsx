@@ -10,6 +10,7 @@ const NavBar = ({ scrollToSection }) => {
           <NavItem
             key={index}
             text={item.text}
+            icon={item.icon}
             onClick={() => scrollToSection(item.text.toLowerCase())}
           />
         ))}

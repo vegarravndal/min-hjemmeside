@@ -64,19 +64,18 @@ h6,
   transition:
     background-color 0.6s ease,
     color 0.4s ease;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   position: relative;
   z-index: 1;
-  -webkit-background-clip: content-box;
-  background-clip: content-box;
 }
 
 .bg-hero {
-  /* diagonal animated gradient */
-  background: linear-gradient(135deg, #eef2ff 0%, #fce7f3 50%, #f3f4f6 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 10s ease infinite;
+  background-color: #fff;
+  background-image:
+    radial-gradient(ellipse 31rem 24rem at 8% 18%, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0.13) 38%, transparent 39%),
+    radial-gradient(ellipse 27rem 20rem at 91% 78%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 42%, transparent 43%),
+    linear-gradient(128deg, transparent 0 48%, rgba(0, 0, 0, 0.055) 48% 62%, transparent 62% 100%);
 }
 
 @keyframes gradientShift {
