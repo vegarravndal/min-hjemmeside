@@ -31,7 +31,7 @@ const ContactForm = ({ headerHeight = 16 }) => {
   return (
     <section
       id="contact"
-      className="section bg-white-section px-4 md:px-12"
+      className="section bg-white-section px-4 py-12 md:px-12"
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-3xl mx-auto text-center">

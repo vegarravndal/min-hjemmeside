@@ -4,7 +4,7 @@ const AboutPage = ({ headerHeight = 64 }) => {
   return (
     <section
       id="about"
-      className="px-4 section bg-white-section md:px-12"
+      className="px-4 py-12 section bg-white-section md:px-12"
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto">

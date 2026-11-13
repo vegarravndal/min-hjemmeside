@@ -4,7 +4,7 @@ const Projects = ({ headerHeight = 16 }) => {
   return (
     <section
       id="projects"
-      className="section bg-default px-4 md:px-12"
+      className="section bg-default px-4 py-12 md:px-12"
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto text-center">
