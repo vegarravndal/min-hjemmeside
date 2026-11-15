@@ -8,12 +8,12 @@ const AboutPage = ({ headerHeight = 64 }) => {
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-900 md:text-4xl mb-10">
+        <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
           About Me
         </h2>
 
         <div className="grid items-start gap-12 md:grid-cols-2">
-          <div className="text-lg leading-relaxed text-gray-700">
+          <div className="text-lg leading-relaxed text-slate-300">
             <p className="mb-5">
               Hello! I’m a frontend developer with a strong interest in 3D
               design and interactive web experiences.
@@ -27,22 +27,22 @@ const AboutPage = ({ headerHeight = 64 }) => {
             </p>
           </div>
 
-          <div className="p-6 bg-white border border-gray-200 shadow-md rounded-xl">
-            <ul className="space-y-4 text-gray-800">
+          <div className="surface-card rounded-xl p-6">
+            <ul className="space-y-4 text-slate-200">
               <li>
-                <span className="font-semibold text-gray-900">Location:</span>{" "}
+                <span className="font-semibold text-white">Location:</span>{" "}
                 Norway
               </li>
               <li>
-                <span className="font-semibold text-gray-900">Focus:</span>{" "}
+                <span className="font-semibold text-white">Focus:</span>{" "}
                 Frontend & 3D
               </li>
               <li>
-                <span className="font-semibold text-gray-900">Tech:</span>{" "}
+                <span className="font-semibold text-white">Tech:</span>{" "}
                 React, JavaScript, Three.js
               </li>
               <li>
-                <span className="font-semibold text-gray-900">Interests:</span>{" "}
+                <span className="font-semibold text-white">Interests:</span>{" "}
                 UI, animation, 3D modeling
               </li>
             </ul>

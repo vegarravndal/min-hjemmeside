@@ -36,7 +36,7 @@ const ContactForm = ({ headerHeight = 16 }) => {
     >
       <div className="max-w-3xl mx-auto text-center">
 
-        <h2 className="text-3xl font-medium text-gray-900 mb-10">
+        <h2 className="mb-10 text-3xl font-medium text-white">
           Contact Me
         </h2>
 
@@ -66,7 +66,7 @@ const ContactForm = ({ headerHeight = 16 }) => {
           />
 
           {status && (
-            <p role="status" aria-live="polite" className="text-sm text-gray-700">
+            <p role="status" aria-live="polite" className="text-sm text-slate-300">
               {status}
             </p>
           )}
@@ -74,7 +74,7 @@ const ContactForm = ({ headerHeight = 16 }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 font-semibold text-white transition bg-blue-600 rounded-full hover:bg-blue-700"
+            className="rounded-full bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-200 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>

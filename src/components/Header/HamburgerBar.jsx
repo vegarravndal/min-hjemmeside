@@ -39,18 +39,19 @@ const HamburgerBar = ({ scrollToSection, toggleMenu, menuOpen }) => {
       <button
         ref={buttonRef}
         onClick={toggleMenu}
-        className="flex items-center justify-center"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        className="flex items-center justify-center text-slate-100"
       >
-        <GiHamburgerMenu className="h-10 w-10 text-[var(--text-primary)]" />
+        <GiHamburgerMenu aria-hidden="true" className="h-10 w-10 text-cyan-300" />
       </button>
 
       {menuOpen && (
         <div
           ref={menuRef}
-          className="fixed left-0 right-0 top-[64px] z-50 w-full p-6 bg-white shadow-lg md:hidden"
+          className="fixed left-0 right-0 top-[64px] z-50 w-full border-b border-white/10 bg-slate-950/95 p-6 text-white shadow-xl shadow-black/30 backdrop-blur-xl md:hidden"
         >
           <button onClick={toggleMenu} className="absolute right-4 top-4">
-            <IoCloseSharp className="h-10 w-10 text-[var(--text-primary)]" />
+            <IoCloseSharp aria-hidden="true" className="h-10 w-10 text-cyan-300" />
           </button>
 
           <nav className="flex flex-col gap-6 mt-12">

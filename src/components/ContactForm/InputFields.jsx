@@ -15,7 +15,7 @@ export const InputField = ({
       {children && (
         <label
           htmlFor={name}
-          className="block mb-2 font-semibold text-gray-700"
+          className="mb-2 block font-semibold text-slate-200"
         >
           {children}
         </label>
@@ -30,7 +30,7 @@ export const InputField = ({
         onChange={onChange}
         required
         rows={type === "textarea" ? 4 : undefined}
-        className="w-full px-4 py-3 text-gray-900 transition bg-white border border-gray-200 shadow-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-slate-100 shadow-sm transition placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-300"
       />
     </div>
   );

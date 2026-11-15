@@ -8,14 +8,14 @@ const Header = forwardRef(({ scrollToSection, headerHeight = 76 }, ref) => {
   return (
     <header
       ref={ref}
-      className="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200"
+      className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-slate-950/80 text-white backdrop-blur-xl"
       style={{ height: `${headerHeight}px` }}
     >
       <div className="flex items-center w-full h-full px-6 lg:px-12">
 
         <h1
           onClick={() => scrollToSection("home")}
-          className="text-xl font-normal cursor-pointer hover:opacity-70"
+          className="cursor-pointer text-xl font-normal text-white transition hover:text-cyan-300"
         >
           Vegar Ravndal
         </h1>

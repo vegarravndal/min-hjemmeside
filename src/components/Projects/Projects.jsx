@@ -8,7 +8,7 @@ const Projects = ({ headerHeight = 16 }) => {
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-medium text-gray-900 mb-10">
+        <h2 className="mb-10 text-3xl font-medium text-white">
           Projects
         </h2>
 
@@ -18,9 +18,9 @@ const Projects = ({ headerHeight = 16 }) => {
             href="https://www.artstation.com/vegarravndal"
             target="_blank"
             rel="noopener noreferrer"
-            className="block p-6 bg-white border border-gray-200 rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.12),0_10px_30px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.16),0_10px_30px_rgba(0,0,0,0.1)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+            className="surface-card block rounded-xl p-6 text-left text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-xl hover:shadow-cyan-950/30 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
           >
-            <h3 className="mb-2 font-semibold text-blue-600">3D Blender Project</h3>
+            <h3 className="mb-2 font-semibold text-cyan-300">3D Blender Project</h3>
             <p>Interactive 3D models and animations showcased via WebGL/Three.js.</p>
           </a>
 
@@ -29,9 +29,9 @@ const Projects = ({ headerHeight = 16 }) => {
             href="https://vegars-butikk.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block p-6 bg-white border border-gray-200 rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.12),0_10px_30px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.16),0_10px_30px_rgba(0,0,0,0.1)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+            className="surface-card block rounded-xl p-6 text-left text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-violet-300/30 hover:shadow-xl hover:shadow-violet-950/30 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300"
           >
-            <h3 className="mb-2 font-semibold text-blue-600">Portfolio Website</h3>
+            <h3 className="mb-2 font-semibold text-violet-300">Portfolio Website</h3>
             <p>Responsive personal website built with React and Tailwind CSS.</p>
           </a>
         </div>

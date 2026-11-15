@@ -9,11 +9,11 @@ const SkillSection = ({ headerHeight = 16 }) => {
       style={{ scrollMarginTop: `${headerHeight}px` }}
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="mb-10 text-2xl font-medium text-gray-900 md:text-3xl">
+        <h2 className="mb-10 text-2xl font-medium text-white md:text-3xl">
           My Skills
         </h2>
 
-        <p className="mb-10 leading-relaxed text-gray-900">
+        <p className="mb-10 leading-relaxed text-slate-300">
           Here are some of the technologies I use regularly:
         </p>
 
@@ -29,7 +29,7 @@ const SkillSection = ({ headerHeight = 16 }) => {
                 alt={skill.skillName}
                 className="w-12 h-12 mb-2"
               />
-              <span className="text-sm text-gray-900">{skill.skillName}</span>
+              <span className="text-sm text-slate-200">{skill.skillName}</span>
             </div>
           ))}
         </div>

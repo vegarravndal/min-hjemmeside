@@ -10,7 +10,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #f3f4f6; /* light gray */
+  background: #0b1020;
+  color: #f3f5fa;
 }
 
 body {
@@ -19,6 +20,12 @@ body {
 
 :root {
   --playful-font: "Outfit", sans-serif;
+  --page-bg: #0b1020;
+  --surface: #151d30;
+  --text-primary: #f3f5fa;
+  --text-secondary: #a7b1c5;
+  --accent: #59d9e8;
+  --accent-secondary: #9b8cff;
 }
 
 h1,
@@ -47,12 +54,12 @@ h6 {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: #f3f4f6; /* default gray */
-  transition: background-color 0.6s ease;
+  background-color: var(--page-bg);
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(89, 217, 232, 0.08), transparent 55%);
 }
 
 .bg-default {
-  background-color: #f3f4f6;
+  background-color: var(--page-bg);
 }
 
 /* =========================
@@ -68,14 +75,20 @@ h6 {
 }
 
 .bg-hero {
-  background-color: #fff;
+  background-color: var(--page-bg);
   background-image:
-    radial-gradient(ellipse 31rem 24rem at 8% 18%, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0.13) 38%, transparent 39%),
-    radial-gradient(ellipse 27rem 20rem at 91% 78%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 42%, transparent 43%),
-    linear-gradient(128deg, transparent 0 48%, rgba(0, 0, 0, 0.055) 48% 62%, transparent 62% 100%);
+    radial-gradient(ellipse 38rem 30rem at 12% 8%, rgba(89, 217, 232, 0.18), transparent 72%),
+    radial-gradient(ellipse 34rem 28rem at 88% 72%, rgba(155, 140, 255, 0.2), transparent 70%),
+    linear-gradient(145deg, #0b1020 8%, #10182b 58%, #11172a 100%);
 }
 
 .bg-white-section {
-  background: #ffffff;
+  background: #10182a;
+}
+
+.surface-card {
+  background: rgba(21, 29, 48, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
 }
 
